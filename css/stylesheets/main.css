@@ -1,0 +1,510 @@
+/* TO NORMALIZE CSS */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+/* line 10, ../sass/atoms/_reset.scss */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  height: 100%;
+  -webkit-font-smoothing: antialiased !important;
+  font-size: 16px;
+  background: #FFFFFF; }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+/* line 26, ../sass/atoms/_reset.scss */
+body {
+  margin: 0;
+  height: 100%; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+/* line 35, ../sass/atoms/_reset.scss */
+main {
+  display: block; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 47, ../sass/atoms/_reset.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 58, ../sass/atoms/_reset.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+/* line 70, ../sass/atoms/_reset.scss */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 81, ../sass/atoms/_reset.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 90, ../sass/atoms/_reset.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 100, ../sass/atoms/_reset.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 111, ../sass/atoms/_reset.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 120, ../sass/atoms/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 128, ../sass/atoms/_reset.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 132, ../sass/atoms/_reset.scss */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+/* line 143, ../sass/atoms/_reset.scss */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 155, ../sass/atoms/_reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 171, ../sass/atoms/_reset.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 181, ../sass/atoms/_reset.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 190, ../sass/atoms/_reset.scss */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 201, ../sass/atoms/_reset.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 213, ../sass/atoms/_reset.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 235, ../sass/atoms/_reset.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 248, ../sass/atoms/_reset.scss */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+/* line 256, ../sass/atoms/_reset.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+/* line 265, ../sass/atoms/_reset.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 275, ../sass/atoms/_reset.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 285, ../sass/atoms/_reset.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+/* line 294, ../sass/atoms/_reset.scss */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 303, ../sass/atoms/_reset.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+/* line 315, ../sass/atoms/_reset.scss */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 323, ../sass/atoms/_reset.scss */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+/* line 334, ../sass/atoms/_reset.scss */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+/* line 342, ../sass/atoms/_reset.scss */
+[hidden] {
+  display: none; }
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url("../../../fonts/Roboto-Black.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../../../fonts/Roboto-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("../../../fonts/Roboto-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../../../fonts/Roboto-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url("../../../fonts/Roboto-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url("../../../fonts/Roboto-Thin.ttf") format("truetype"); }
+/* line 1, ../sass/atoms/_typography.scss */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0; }
+
+/* line 5, ../sass/atoms/_typography.scss */
+p {
+  font-family: Roboto-Regular, sans-serif; }
+
+/* line 9, ../sass/atoms/_typography.scss */
+p.already-present {
+  font-size: 18px; }
+
+/* line 13, ../sass/atoms/_typography.scss */
+p.error {
+  font-size: 16px;
+  color: red; }
+
+/* line 18, ../sass/atoms/_typography.scss */
+p.info {
+  font-size: 20px;
+  text-align: center; }
+
+@media (max-width: 678px) {
+  /* line 24, ../sass/atoms/_typography.scss */
+  p.info {
+    font-size: 18px;
+    line-height: 24px; } }
+/* line 1, ../sass/atoms/_button.scss */
+button {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: Roboto-Regular, sans-serif; }
+
+/* line 9, ../sass/atoms/_button.scss */
+button.add {
+  min-height: 42px;
+  max-height: 42px;
+  min-width: 90px;
+  border-radius: 25px;
+  background: #FF1655;
+  color: #FFF; }
+
+/* line 1, ../sass/atoms/_forms.scss */
+input {
+  min-width: 180px;
+  min-height: 40px;
+  border: 1px solid #BBB;
+  border-radius: 25px;
+  outline: none;
+  padding: 0 20px;
+  font-size: 18px;
+  font-family: Roboto-Light, sans-serif; }
+
+/* line 12, ../sass/atoms/_forms.scss */
+input:focus {
+  border: 1px solid blue; }
+
+@media (max-width: 450px) {
+  /* line 18, ../sass/atoms/_forms.scss */
+  input {
+    min-width: 150px;
+    max-width: 150px; } }
+/* line 1, ../sass/templates/_base.scss */
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; }
+
+/* line 8, ../sass/templates/_base.scss */
+main > section {
+  position: relative;
+  flex-grow: 1; }
+
+/* line 13, ../sass/templates/_base.scss */
+.center-it, .block-1, .block-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 0 auto; }
+
+/* line 26, ../sass/templates/_base.scss */
+.block-1 > div {
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto; }
+
+/* line 32, ../sass/templates/_base.scss */
+.block-1 > div > div {
+  display: flex; }
+
+/* line 36, ../sass/templates/_base.scss */
+.block-1 > div > div button {
+  margin-left: 8px; }
+
+/* line 40, ../sass/templates/_base.scss */
+.block-1 > div > p {
+  opacity: 0;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 8px; }
+
+/* line 47, ../sass/templates/_base.scss */
+.block-1 > p.info {
+  margin-bottom: 20px; }
+
+/* line 51, ../sass/templates/_base.scss */
+.block-1 > p.already-present {
+  margin-top: 30px; }
+
+/* line 55, ../sass/templates/_base.scss */
+.block-1 > p.error {
+  margin-top: 8px;
+  max-height: 100px;
+  overflow: auto; }
+
+/* line 65, ../sass/templates/_base.scss */
+.block-2 > p {
+  font-family: Roboto-Medium, sans-serif;
+  font-size: 18px; }
+
+/* line 70, ../sass/templates/_base.scss */
+.block-2 > div {
+  font-family: Roboto-Regular, sans-serif;
+  padding: 12px 20px;
+  word-break: break-word;
+  overflow: auto;
+  height: 110px;
+  border: 1px solid #BBB;
+  border-radius: 12px;
+  margin-top: 12px;
+  background: rgba(187, 187, 187, 0.1);
+  font-size: 16px;
+  line-height: 24px; }
+
+@media (max-width: 678px) {
+  /* line 86, ../sass/templates/_base.scss */
+  .center-it, .block-1, .block-2 {
+    width: 95%; } }
+/* line 1, ../sass/templates/_header.scss */
+header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #BBB; }
+
+/* line 7, ../sass/templates/_header.scss */
+header > h4 {
+  font-family: Roboto-Light, sans-serif;
+  font-size: 24px;
+  color: #444; }
+
+@media (max-width: 678px) {
+  /* line 14, ../sass/templates/_header.scss */
+  header > h4 {
+    font-size: 20px; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/stylesheets/build/main.css">
+    <title>Assignment 1</title>
+</head>
+<body>
+<main>
+    <header>
+        <h4>Program to add numbers to list</h4>
+    </header>
+    <section>
+        <div class="block-1">
+            <p class="info">Add numbers or range of numbers seperated with comma</p>
+            <div style="text-align: center">
+                <div>
+                    <input id="new" type="text" spellcheck="false" placeholder="Eg. 800, 900, 100-200"/>
+                    <button class="add">Add</button>
+                </div>
+                <p class="error" id="input-error">Error! Incorrect input.</p>
+            </div>
+            <p class="already-present" style="opacity: 0">The following numbers are already present:</p>
+            <p class="error" id="present-list"></p>
+        </div>
+    </section>
+    <section>
+        <div class="block-2">
+            <p>Final List:</p>
+            <div id="list">
+
+            </div>
+        </div>
+    </section>
+</main>
+<script src="js/build/production.js"></script>
+<script>
+
+    // list of numbers
+    let list = [];
+
+    // regular expression to check that the value is a number(integer), can be negative or positive
+    let exp_number = /^[-]?\d+$/;
+
+    // regular expression to check whether value is a range
+    let exp_range = /^[-]?\d+[-][-]?\d+$/;
+
+    // function to sort list by ascending order and show it
+    function showList() {
+        list.sort(function(a, b) {
+            return a-b;
+        });
+        $('#list').text(list.join(', '));
+    }
+
+    // checks whether number already present in the list or not
+    function addToList(num) {
+        return !list.includes(num);
+    }
+
+    // initial call show list on page load
+    $('#list').text(list);
+
+    // hides error on input click
+    $('#new').focus(function() {
+        $('#input-error').css('opacity', '0');
+        $('.already-present').css('opacity', '0');
+        $('#present-list').text('');
+    });
+
+
+    // function to do what happens when clicked on add button
+    $('.add').click(function() {
+        if ($('#new').val()) {
+
+            // array to hold numbers that are already present
+            let already_present = [];
+
+            // splits input with comma
+            let input = $('#new').val().split(',');
+
+            for (let i=0; i < input.length; i++) {
+
+                // checks whether each input is a number
+                if (exp_number.test(input[i].trim())) {
+
+                    // converts input string to number
+                    let number = Number(input[i]);
+
+                    // if number present in list, push to already_present array, otherwise push to list
+                    if (addToList(number)){
+                        list.push(number);
+                    } else {
+                        already_present.push(number);
+                    }
+                }
+                // checks whether if the input is not a number, is it a range?
+
+                else if (exp_range.test(input[i].trim())) {
+
+                    // splits the range using '-'
+                    let range = input[i].trim().split('-');
+                    let f_neg = false;
+                    let number_1;
+                    let number_2;
+
+                    // if else to know whether first number is negative or not
+                    if (range[0] === '') {
+                        number_1 = Number('-' + range[1]);
+                        f_neg = true;
+                    } else {
+                        number_1 = Number(range[0]);
+                    }
+
+                    // if else to know whether second number is negative or not
+                    if (f_neg) {
+                        if (typeof range[2] !== 'undefined' && range[2] === '') {
+                            number_2 = Number('-' + range[3]);
+                        } else {
+                            number_2 = Number(range[2])
+                        }
+                    } else {
+                        if (typeof range[1] !== 'undefined' && range[1] === '') {
+                            number_2 = Number('-' + range[2]);
+                        } else {
+                            number_2 = Number(range[1])
+                        }
+                    }
+
+                    // loop to run through the range and add numbers to list (if not already present)
+                    for (let i=Math.min(number_1, number_2); i <= Math.max(number_1, number_2); i++) {
+                        if (addToList(i)){
+                            list.push(i);
+                        } else {
+                            already_present.push(i);
+                        }
+                    }
+                } else {
+
+                    // if incorrect input received, show error
+                    $('#input-error').css('opacity', '1');
+                    break;
+                }
+            }
+
+            // show list in the browser in ascending order
+            showList();
+
+            // if some values are already present, show it
+            if (already_present.length !== 0) {
+                $('.already-present').css('opacity', '1');
+                $('#present-list').text(already_present.join(', '));
+            }
+
+            // reset input
+            $('#new').val('');
+        }
+    });
+</script>
+</body>
+</html>

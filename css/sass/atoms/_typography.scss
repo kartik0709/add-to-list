@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+p {
+    font-family: Roboto-Regular, sans-serif;
+}
+
+p.already-present {
+    font-size: 18px;
+}
+
+p.error {
+    font-size: 16px;
+    color: rgb(255,0,0);
+}
+
+p.info {
+    font-size: 20px;
+    text-align: center;
+}
+
+@media(max-width: 678px) {
+    p.info {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
